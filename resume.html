@@ -207,7 +207,7 @@
             </div>
 			
 			<h2 class="section-title">Skills</h2>
-			<ul class="skills-list">
+			<ul id="skills" class="skills-list">
 				<li>Microservice stacks</li>
 				<li>Full-stack development</li>
 				<li>DevOps principles</li>
@@ -243,7 +243,7 @@
         
         <div class="right-column">
             <section>
-                <div class="skills-description">
+                <div id="summary" class="skills-description">
                     Full stack developer with over 10 years of experience designing, developing, and maintaining software solutions. Proven ability to learn independently, adapt to new technologies, and deliver impactful results. Strong backend experience with Java and C#, and extensive frontend expertise using React, Redux-Saga, and TypeScript. Skilled in Salesforce, Python, PHP, REST APIs, Git, SQL, and cloud/DevOps technologies including AWS (S3, SQS, EC2), Docker, Docker Compose, Terraform, and Ansible. Recognized for reliability, mentorship, and innovative problem-solving, with a history of creating internal tools, leading projects, and supporting high-performing teams.
                 </div>
             </section>
@@ -251,11 +251,11 @@
             <section class="work-experience">
                 <h2 class="section-title">Work Experience</h2>
 				
-                <div>
-                    <div class="job-title">Full Stack Software Developer</div>
-                    <div class="job-details">Stingray Digital Inc, Montreal, QC | September 2015 - Current</div>
+                <div id="jobs">
+                    <div id="job-title" class="job-title">Full Stack Software Developer</div>
+                    <div id="job-details" class="job-details">Stingray Digital Inc, Montreal, QC | September 2015 - Current</div>
                     
-                    <ul class="job-responsibilities">
+                    <ul id="responsibilities" class="job-responsibilities">
 					    <li>Progressed from Deployment Technician → Technical Coordinator → Junior Developer → Salesforce Lead Developer → 
                             Full Stack Developer, demonstrating adaptability, technical growth, and leadership.</li>
 						<li>Developed, maintained, and enhanced media player systems and the management interface web application, 
@@ -271,14 +271,14 @@
 						<li>Fully integrated into Shape Up workflow for the management interface; delivered features, bug fixes, and ongoing 
                             maintenance, eventually becoming the sole developer maintaining multiple critical services and stacks.</li>
 						<li>Managed deployments and infrastructure using AWS (S3, SQS, EC2) and containerized services with Docker/Docker Compose, 
-                            while leveraging Terraform and Ansible to automate provisioning and configuration.</li>
+                            using Terraform and Ansible to automate provisioning and configuration.</li>
                         <li>Reviewed and improved peer code through code reviews, ensuring quality, maintainability, and adherence to best 
                             practices.</li>
                         <li>Debugged complex multi-service issues and implemented automated unit tests to reduce regression risk and improve 
                             reliability.</li>
                         <li>Participated in 6+ hackathons, contributing experimental and production-ready projects that fostered innovation.</li>
-						<li>Recognized with 20+ peer-to-peer “Good Vibes” commendations for reliability, teamwork, problem-solving, and efficiency 
-                            — praised as a dependable collaborator, proactive investigator, and a “rising star” within the team.</li>
+						<li>Recognized with 20+ peer-to-peer “Good Vibes” commendations for reliability, teamwork, problem-solving, and efficiency, 
+                            praised as a dependable collaborator, proactive investigator, and a “rising star” within the team.</li>
                     </ul>
                 </div>
             </section>
@@ -294,6 +294,198 @@
 
         document.getElementById("email").innerText = String.fromCharCode(...eCodes);
         document.getElementById("phone").innerText = String.fromCharCode(...pCodes);  
+      }
+
+      const roles = {
+        events: {
+          summary: "Reliable, level-headed team player looking to contribute to festivals, concerts, and live event venues in front-of-house roles such as ticket scanning, access control, wristband checking, bag checks, coat check, crowd guidance, and VIP entrance support. Comfortable working long shifts on my feet, staying calm and friendly with the public, and handling busy entry points or unexpected situations without losing focus. Bilingual in French and English, punctual, well-presented, and easy to work with. Backed by 15+ years of professional experience across customer service, warehouse, and night-shift roles where dependability, clear communication, and quick problem-solving were essential, and ready to bring that same energy to event crews and security teams.",
+          skills: [
+            "Customer service & public-facing communication",
+            "Bilingual French / English",
+            "Punctual and dependable",
+            "Calm under pressure",
+            "Team collaboration",
+            "Comfortable with night & overnight shifts",
+            "On feet for long shifts",
+            "Attention to detail"
+          ],
+          jobs: [
+            {
+              title: "Technical Coordinator & Support Specialist",
+              details: "Stingray Digital Inc, Montreal, QC | September 2015 - Current",
+              responsibilities: [
+                "Fast-paced environment serving thousands of business clients across North America; reliability, punctuality, and clear communication were essential every shift.",
+                "Front-line and level 2 support, handling stressful situations calmly and professionally while keeping clients and internal teams informed.",
+                "Coordinated equipment deployments and logistics, tracking inventory and verifying details so the right gear reached the right location on time.",
+                "Trained and onboarded new team members across multiple roles, explaining procedures clearly to people of all backgrounds.",
+                "Recognized 20+ times by peers for dependability, teamwork, and a positive attitude. The kind of person people want on their crew."
+              ]
+            },
+            {
+              title: "Office & Warehouse Clerk",
+              details: "Les Entreprises Sanifa Inc., Boisbriand, QC | November 2010 - December 2014",
+              responsibilities: [
+                "3 years at the front desk and phones: greeted walk-in customers, took phone orders, and handled requests in both French and English.",
+                "1 year in the warehouse: receiving, stocking, picking orders, and keeping inventory organized.",
+                "Built an internal app to generate weekly product circulars, showing initiative and attention to detail."
+              ]
+            },
+            {
+              title: "Grocery Clerk",
+              details: "Super C, Boisbriand, QC | June 2010 - November 2010",
+              responsibilities: [
+                "Customer-facing retail role: assisted shoppers, handled busy periods, and kept the floor stocked and tidy."
+              ]
+            },
+            {
+              title: "Overnight Convenience Store Clerk",
+              details: "Ultramar Ltée, Bois-des-Filion, QC | March 2008 - May 2008",
+              responsibilities: [
+                "Solo overnight shifts handling cash, customers, and store security. Comfortable working independently through the night."
+              ]
+            },
+            {
+              title: "Sanitation & General Labour (multiple positions)",
+              details: "O Sole Mio, Maître Saladier, Petite Bretonne Distribution, AMST Ste-Thérèse, and others | 2005 - 2015",
+              responsibilities: [
+                "Several years of physically demanding work in food production, woodworking, and warehouse settings.",
+                "Used to long shifts on my feet, strict hygiene and safety procedures, and showing up on time, every time."
+              ]
+            }
+          ]
+        },
+
+        tutor: {
+          summary: "Bilingual (FR/EN) self-taught software developer with 10+ years of professional experience, available for evening and weekend tutoring in programming, web development, and career-switcher coaching. Strong track record of mentoring junior developers and onboarding non-technical colleagues at work, comfortable explaining complex topics in plain language, at any level, in either French or English. Particularly well-suited to helping French-speaking learners break into tech careers in English-language environments.",
+          skills: [
+            "Bilingual French / English instruction",
+            "Patient, plain-language explanations",
+            "Self-taught, knows the learning path firsthand",
+            "Mentoring junior developers (work)",
+            "Web fundamentals: HTML, CSS, JavaScript",
+            "Backend: Java, C#, Python, PHP, SQL",
+            "Frontend: React, TypeScript, Redux",
+            "Career guidance for self-learners"
+          ],
+          jobs: [
+            {
+              title: "Full Stack Software Developer & Mentor",
+              details: "Stingray Digital Inc, Montreal, QC | September 2015 - Current",
+              responsibilities: [
+                "Trained and mentored new developers and non-technical colleagues across multiple teams over 10+ years, adapting explanations to each person's background.",
+                "Built an internal troubleshooting wizard to onboard new support agents, designed specifically to teach concepts step by step rather than just hand off answers.",
+                "Reviewed peer code daily, giving constructive feedback that helped colleagues grow rather than just enforcing standards.",
+                "Worked across the full stack (Java, C#, React, TypeScript, SQL, AWS), broad enough to teach beginners web fundamentals or guide intermediate learners through real-world architecture.",
+                "Recognized 20+ times by peers as a 'go-to' person and 'rising star' for being approachable and good at explaining things."
+              ]
+            },
+            {
+              title: "Self-Taught Developer Journey",
+              details: "Independent learning | 2010 - Present",
+              responsibilities: [
+                "Built a full software career from zero formal CS education. Knows the actual roadmap, common stuck points, and what resources are worth the time vs. wasted.",
+                "Especially valuable for career-switchers, bootcamp students, and self-learners who want guidance from someone who walked the same path."
+              ]
+            },
+            {
+              title: "Office Clerk & Customer-Facing Roles",
+              details: "Les Entreprises Sanifa Inc. and others, Boisbriand, QC | 2010 - 2015",
+              responsibilities: [
+                "Years of front-desk and phone-based customer service in French and English, comfortable adjusting tone and vocabulary depending on who's in front of me.",
+                "Built an internal app to generate weekly product circulars, an early example of teaching myself to code by solving real problems at work."
+              ]
+            }
+          ]
+        },
+
+        freelance: {
+          summary: "Self-taught full-stack developer with 10+ years of professional experience, available for freelance projects: small-business automation, internal tools, custom dashboards, Salesforce setup and customization, web development, and one-off integrations. Specialized in solving the kind of practical problems small companies don't have a dedicated IT team for, like turning manual spreadsheets into apps, automating repetitive workflows, or fixing the system the previous developer abandoned. Bilingual French/English, based in Montreal, available evenings and weekends.",
+          skills: [
+            "Internal tools & automation",
+            "Web development (React, TypeScript)",
+            "Backend & APIs (Java, C#, Python, PHP)",
+            "Salesforce (Apex, LWC, integrations)",
+            "Databases & SQL",
+            "AWS, Docker, deployment",
+            "Bilingual French / English",
+            "Clear scoping & honest estimates"
+          ],
+          jobs: [
+            {
+              title: "Full Stack Software Developer",
+              details: "Stingray Digital Inc, Montreal, QC | September 2015 - Current",
+              responsibilities: [
+                "Built dozens of internal tools end-to-end (workflow automation, inventory management, CSV validators, device monitoring dashboards), many of which got promoted into production systems.",
+                "Revitalized a stalled Salesforce implementation: Sales Cloud, Service Cloud, CPQ, Apex, Lightning Web Components, and API integrations across multiple departments.",
+                "Stack: Java, C#, React, Redux-Saga, TypeScript, Python, PHP, SQL, REST APIs, AWS (S3, SQS, EC2), Docker, Terraform, Ansible.",
+                "Sole developer maintaining several critical services. Used to taking full ownership of a project from spec to deployment.",
+                "Provided level 2 support and built a troubleshooting wizard that reduced response times for the support team."
+              ]
+            },
+            {
+              title: "Independent / Side Projects",
+              details: "Various | 2010 - Present",
+              responsibilities: [
+                "Built an internal application at a previous employer to generate weekly product circulars, an early example of solving real business problems with code rather than over-engineering.",
+                "Comfortable with the full freelance loop: scoping, estimating, delivering, supporting, and not over-promising."
+              ]
+            },
+            {
+              title: "Office Clerk & Warehouse",
+              details: "Les Entreprises Sanifa Inc., Boisbriand, QC | November 2010 - December 2014",
+              responsibilities: [
+                "4 years in a small-business environment covering front desk, phone orders, warehouse, and inventory. I understand how small companies actually run, not just enterprise theory.",
+                "Bilingual customer-facing service in French and English."
+              ]
+            }
+          ]
+        }
+      };
+
+      const role = (params.get("role") || "developer").toLowerCase();
+      const config = roles[role];
+      if (config) {
+        if (config.summary) {
+          document.getElementById("summary").innerText = config.summary;
+        }
+        if (config.skills) {
+          const skillsEl = document.getElementById("skills");
+          skillsEl.innerHTML = "";
+          config.skills.forEach(s => {
+            const li = document.createElement("li");
+            li.innerText = s;
+            skillsEl.appendChild(li);
+          });
+        }
+        if (config.jobs) {
+          const jobsEl = document.getElementById("jobs");
+          jobsEl.innerHTML = "";
+          config.jobs.forEach((job, idx) => {
+            const wrapper = document.createElement("div");
+            if (idx > 0) wrapper.style.marginTop = "20px";
+
+            const title = document.createElement("div");
+            title.className = "job-title";
+            title.innerText = job.title;
+            wrapper.appendChild(title);
+
+            const details = document.createElement("div");
+            details.className = "job-details";
+            details.innerText = job.details;
+            wrapper.appendChild(details);
+
+            const ul = document.createElement("ul");
+            ul.className = "job-responsibilities";
+            (job.responsibilities || []).forEach(r => {
+              const li = document.createElement("li");
+              li.innerText = r;
+              ul.appendChild(li);
+            });
+            wrapper.appendChild(ul);
+
+            jobsEl.appendChild(wrapper);
+          });
+        }
       }
     </script>
 </body>
